@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <algorithm>
 using namespace std;
 
 void shuffle(int &,int &, int &, int &);
@@ -19,3 +20,15 @@ int main(){
 }
 
 //Write definition of shuffle() here 
+void shuffle(int &a,int &b, int &c, int &d){
+	int x[4] = {a,b,c,d};
+	for(int i = 0 ; i < 4 ; i++){
+		int y = rand()%4 , z = rand()%4;
+		swap (x[z],x[y]);
+	}
+	a = x[0];
+	b = x[1];
+	c = x[2];
+	d = x[3];
+
+}
